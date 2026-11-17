@@ -1,0 +1,2464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Projects — Alex Waweru | Digital Portfolio</title>
+    <meta name="description" content="Selected IT, networking, infrastructure and web development projects by Alex Waweru.">
+    <meta name="theme-color" content="#f1f0e9">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<style>
+:root{--paper:#f1f0e9;--white:#fffef9;--ink:#171714;--muted:#77776e;--green:#d8ff35;--line:#171714;--font:"Space Grotesk",sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.65}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.header{width:min(1160px,90%);margin:auto;border-bottom:2px solid var(--line)}
+.navbar{min-height:76px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.logo{font-size:1.55rem;font-weight:900;letter-spacing:-2px}
+.nav-links{display:flex;align-items:center;gap:25px;font-size:.82rem;font-weight:800}
+.nav-links a{transition:background .2s,color .2s}
+.nav-links a:hover{color:#527d14}
+.nav-cv{background:var(--green);border:1px solid var(--ink);padding:9px 14px;box-shadow:3px 3px 0 var(--ink)}
+.menu-toggle{display:none;background:transparent;border:1px solid var(--ink);padding:9px 12px;font-size:1rem}
+.projects-hero{width:min(1160px,90%);margin:auto;padding:95px 0 65px;border-bottom:2px solid var(--line)}
+.section-subtitle,.project-category{display:block;font-size:.72rem;font-weight:900;text-transform:uppercase;letter-spacing:2px;margin-bottom:14px}
+.projects-hero h1{font-size:clamp(3.5rem,10vw,8rem);line-height:.9;letter-spacing:-.075em;font-weight:900;max-width:1000px}
+.projects-hero>div>p:last-child{max-width:620px;color:var(--muted);margin-top:28px;font-size:1rem}
+.project-index{width:min(1160px,90%);margin:auto;display:grid;grid-template-columns:repeat(5,1fr);border-bottom:2px solid var(--line)}
+.project-index a{padding:17px 13px;border-right:1px solid var(--line);font-size:.77rem;font-weight:900;line-height:1.35}
+.project-index a:last-child{border-right:0}.project-index a:hover{background:var(--green)}
+.project-index span{display:block;color:var(--muted);font-size:.68rem;margin-bottom:5px}
+.project-case-study{width:min(1160px,90%);margin:auto;padding:85px 0;border-bottom:2px solid var(--line);scroll-margin-top:20px}
+.case-study-header{display:grid;grid-template-columns:1fr;max-width:900px;margin-bottom:38px}
+.case-study-header .project-category{color:#557b1d}
+.case-study-header h2{font-size:clamp(2.5rem,6vw,5.2rem);line-height:.98;letter-spacing:-.065em;font-weight:900;max-width:900px}
+.case-study-header p{max-width:690px;color:var(--muted);margin-top:20px;font-size:1rem}
+.case-study-image{border:2px solid var(--line);background:#d5d8ce;margin:35px 0 42px;overflow:hidden}
+.case-study-image img{width:100%;max-height:590px;object-fit:cover}
+.case-study-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;padding:30px 0 40px;border-bottom:1px solid #a6a99e}
+.case-study-grid h3,.case-study-section h3,.case-study-result h3{font-size:1.15rem;line-height:1.2;letter-spacing:-.025em;font-weight:900;margin-bottom:14px}
+.case-study-grid p,.case-study-section p,.case-study-result p{color:#4f534b;font-size:.94rem;margin-bottom:14px}
+.case-tags{display:flex;flex-wrap:wrap;gap:8px}
+.case-tags span{display:inline-block;border:1px solid var(--ink);background:var(--white);padding:6px 10px;font-size:.73rem;font-weight:800}
+.case-study-section{padding:34px 0;border-bottom:1px solid #b7baaf}
+.case-study-section>p{max-width:820px}
+.case-list{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 20px;margin:20px 0}
+.case-list li{display:flex;align-items:flex-start;gap:10px;font-size:.9rem;color:#41453e}
+.case-list i,.case-study-result>i{color:#557b1d}
+.case-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:24px 0 5px}
+.gallery-item{border:1.5px solid var(--line);background:var(--white);overflow:hidden}
+.gallery-item img{width:100%;height:auto;max-height:470px;object-fit:contain;background:#dfe1d9}
+.gallery-item span{display:block;padding:11px 13px;border-top:1px solid var(--line);font-size:.78rem;font-weight:800}
+.vlan-table{border:1px solid var(--line);margin:22px 0;max-width:760px}
+.vlan-row{display:grid;grid-template-columns:.6fr 1.5fr 1.5fr;border-top:1px solid #b7baaf}
+.vlan-row:first-child{border-top:0}.vlan-row span{padding:10px 13px;font-size:.86rem;border-right:1px solid #b7baaf}.vlan-row span:last-child{border-right:0}
+.vlan-heading{background:var(--green);font-weight:900}
+.code-box,.test-results{background:#20231d;color:#f5f6ef;padding:20px;border:1px solid var(--ink);overflow-x:auto;margin:20px 0}
+.code-box p,.test-results p{color:inherit}
+.case-study-result{margin-top:38px;padding:28px;background:var(--white);border:2px solid var(--line);box-shadow:5px 5px 0 var(--ink)}
+.case-study-result>i{font-size:1.25rem;margin-bottom:12px}
+.project-link{display:inline-flex;align-items:center;gap:12px;background:var(--green);border:1px solid var(--ink);padding:11px 16px;margin-top:12px;font-size:.82rem;font-weight:900;box-shadow:3px 3px 0 var(--ink)}
+.project-link:hover,.nav-cv:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--ink)}
+footer{width:min(1160px,90%);margin:auto;padding:28px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:.82rem}
+footer strong{font-size:1.2rem;letter-spacing:-1px}footer p{color:var(--muted)}
+.back-top{border:1px solid var(--ink);padding:9px 13px;font-weight:800}.back-top:hover{background:var(--green)}
+@media(max-width:800px){.nav-links{gap:12px;font-size:.7rem}.project-index{grid-template-columns:repeat(3,1fr)}.project-index a:nth-child(3){border-right:0}.project-index a:nth-child(n+4){border-top:1px solid var(--line)}.project-case-study{padding:65px 0}}
+@media(max-width:620px){.header{position:relative}.navbar{min-height:66px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;z-index:5;top:66px;left:0;right:0;background:var(--paper);border:2px solid var(--line);padding:18px;flex-direction:column;align-items:stretch;font-size:.9rem}.nav-links.open{display:flex}.projects-hero{padding:70px 0 48px}.projects-hero h1{letter-spacing:-.06em}.project-index{grid-template-columns:repeat(2,1fr)}.project-index a{border-bottom:1px solid var(--line)}.project-index a:nth-child(3){border-right:1px solid var(--line)}.project-index a:nth-child(even){border-right:0}.project-case-study{padding:55px 0}.case-study-grid,.case-gallery{grid-template-columns:1fr;gap:22px}.case-list{grid-template-columns:1fr}.vlan-row span{padding:8px;font-size:.75rem}.case-study-result{padding:20px}footer{align-items:flex-start;flex-direction:column}}
+</style>
+
+</head>
+
+
+<body id="top">
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo" aria-label="Alex Waweru home">
+            AW<span style="background:var(--green);padding:2px 5px;margin-left:3px;">.</span>
+        </a>
+
+
+        <div class="nav-links" id="navLinks">
+
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#capabilities">Capabilities</a>
+            <a href="projects.html" aria-current="page">Projects</a>
+            <a href="contact.html">Contact</a>
+
+            <a href="assets/Alex-Waweru-CV.pdf"
+               class="nav-cv"
+               download>
+
+                <i class="fas fa-download"></i>
+                Download CV
+
+            </a>
+
+        </div>
+
+
+        <button class="menu-toggle"
+                id="menuToggle">
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= PAGE HERO ================= -->
+
+<section class="projects-hero">
+
+    <div>
+
+        <p class="section-subtitle">
+            My Work
+        </p>
+
+        <h1>
+            Featured Projects
+        </h1>
+
+        <p>
+            A collection of practical projects demonstrating my
+            experience in networking, IT infrastructure,
+            cybersecurity, and web development.
+        </p>
+
+    </div>
+
+</section>
+
+<nav class="project-index" aria-label="Project sections">
+<a href="#office-network"><span>01 / NETWORKING</span>Enterprise Office Network</a>
+<a href="#cabling"><span>02 / INFRASTRUCTURE</span>Structured Cabling</a>
+<a href="#afya-smart"><span>03 / WEB APP</span>AfyaSmart</a>
+<a href="#smartdesk"><span>04 / IT SUPPORT</span>SmartDesk</a>
+<a href="#autotech"><span>05 / AUTOMATION</span>AutoTech</a>
+</nav>
+
+
+<!-- ================= ENTERPRISE NETWORK ================= -->
+
+<section class="project-case-study"
+         id="office-network">
+
+    <div class="case-study-header">
+
+        <span class="project-category">
+            Cisco Networking
+        </span>
+
+        <h2>
+            Enterprise Office Network
+        </h2>
+
+        <p>
+            Cisco Packet Tracer network designed for a small
+            enterprise environment with departmental segmentation,
+            routing, DHCP, NAT, wireless connectivity, and
+            security controls.
+        </p>
+
+    </div>
+
+
+    <!-- Project Image -->
+
+    <div class="case-study-image">
+
+        <img
+            src="images/projects/office-network/topology.jpg"
+            alt="Enterprise Office Network topology">
+
+    </div>
+
+
+    <!-- Overview -->
+
+    <div class="case-study-grid">
+
+        <div>
+
+            <h3>
+                Project Objective
+            </h3>
+
+            <p>
+                The objective was to design and implement a
+                functional enterprise office network that provides
+                secure communication between departments while
+                allowing controlled access to external networks.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Technologies Used
+            </h3>
+
+            <div class="case-tags">
+
+                <span>Cisco 3560</span>
+                <span>Cisco 2960</span>
+                <span>Cisco 1941</span>
+                <span>VLANs</span>
+                <span>DHCP</span>
+                <span>NAT/PAT</span>
+                <span>ACL</span>
+                <span>Wireless</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Network Design -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Network Design
+        </h3>
+
+        <p>
+            The network was divided into separate VLANs to
+            improve organization and reduce unnecessary broadcast
+            traffic.
+        </p>
+
+
+        <div class="vlan-table">
+
+            <div class="vlan-row vlan-heading">
+
+                <span>VLAN</span>
+                <span>Department</span>
+                <span>Network</span>
+
+            </div>
+
+
+            <div class="vlan-row">
+
+                <span>10</span>
+                <span>Administration</span>
+                <span>192.168.10.0/24</span>
+
+            </div>
+
+
+            <div class="vlan-row">
+
+                <span>20</span>
+                <span>Finance</span>
+                <span>192.168.20.0/24</span>
+
+            </div>
+
+
+            <div class="vlan-row">
+
+                <span>30</span>
+                <span>IT</span>
+                <span>192.168.30.0/24</span>
+
+            </div>
+
+
+            <div class="vlan-row">
+
+                <span>40</span>
+                <span>Wireless</span>
+                <span>192.168.40.0/24</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Implementation -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Implementation
+        </h3>
+
+        <p>
+            Inter-VLAN routing was implemented on the Cisco 3560
+            multilayer switch using switched virtual interfaces.
+            DHCP pools were configured for each VLAN, allowing
+            clients to automatically receive network addresses.
+        </p>
+
+        <p>
+            The Cisco 1941 router was configured to perform
+            NAT/PAT for internal networks. A separate edge router
+            provided the external network connection.
+        </p>
+
+    </div>
+
+
+    <!-- Security -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Network Security
+        </h3>
+
+        <p>
+            An extended ACL was implemented on the multilayer
+            switch to control communication between departments.
+            Wireless users in VLAN 40 were restricted from
+            accessing the Finance VLAN while other permitted
+            communication remained available.
+        </p>
+
+        <div class="code-box">
+
+<pre>
+access-list 100 deny ip
+192.168.40.0 0.0.0.255
+192.168.20.0 0.0.0.255
+
+access-list 100 permit ip any any
+
+interface vlan 40
+ ip access-group 100 in
+</pre>
+
+        </div>
+
+    </div>
+
+
+    <!-- Services -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Network Services
+        </h3>
+
+        <ul class="case-list">
+
+            <li>
+                <i class="fas fa-check"></i>
+                DHCP addressing for all VLANs
+            </li>
+
+            <li>
+                <i class="fas fa-check"></i>
+                Inter-VLAN communication
+            </li>
+
+            <li>
+                <i class="fas fa-check"></i>
+                NAT/PAT for external connectivity
+            </li>
+
+            <li>
+                <i class="fas fa-check"></i>
+                Wireless connectivity
+            </li>
+
+            <li>
+                <i class="fas fa-check"></i>
+                Network printer access
+            </li>
+
+            <li>
+                <i class="fas fa-check"></i>
+                Access control using ACLs
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- Testing -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Testing & Results
+        </h3>
+
+        <p>
+            Connectivity and network services were tested using
+            Cisco IOS verification commands and end-device
+            connectivity tests.
+        </p>
+
+
+        <div class="test-results">
+
+            <div>
+                <strong>PASS</strong>
+                <span>DHCP Assignment</span>
+            </div>
+
+            <div>
+                <strong>PASS</strong>
+                <span>VLAN Communication</span>
+            </div>
+
+            <div>
+                <strong>PASS</strong>
+                <span>Printer Connectivity</span>
+            </div>
+
+            <div>
+                <strong>PASS</strong>
+                <span>Wireless Connectivity</span>
+            </div>
+
+            <div>
+                <strong>PASS</strong>
+                <span>NAT Configuration</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Challenges -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Challenges & Troubleshooting
+        </h3>
+
+        <p>
+            During implementation, several configuration issues
+            were encountered, including subnet mask mismatches,
+            routing problems, wireless adapter configuration,
+            and ACL connectivity restrictions.
+        </p>
+
+        <p>
+            These issues were resolved using commands such as
+            <strong>show ip route</strong>,
+            <strong>show ip interface brief</strong>,
+            <strong>show interfaces trunk</strong>,
+            <strong>show access-lists</strong>, and
+            <strong>ping</strong>.
+        </p>
+
+    </div>
+
+
+    <!-- Outcome -->
+
+    <div class="case-study-result">
+
+        <i class="fas fa-circle-check"></i>
+
+        <h3>
+            Project Outcome
+        </h3>
+
+        <p>
+            The enterprise network was successfully implemented
+            and tested. The project demonstrates practical
+            experience with Cisco networking, VLAN segmentation,
+            routing, DHCP, NAT/PAT, ACL security, wireless
+            networking, and network troubleshooting.
+        </p>
+
+    </div>
+
+</section>
+<!-- ================= STRUCTURED CABLING PROJECT ================= -->
+
+<section class="project-case-study"
+         id="cabling">
+
+    <div class="case-study-header">
+
+        <span class="project-category">
+            Structured Cabling
+        </span>
+
+        <h2>
+            Small Office Structured Cabling Design
+        </h2>
+
+        <p>
+            A structured cabling design developed for a 20-user
+            accounting office, covering the physical network
+            infrastructure from workstation outlets to the
+            network rack.
+        </p>
+
+    </div>
+
+
+    <!-- Main Project Image -->
+
+    <div class="case-study-image">
+
+        <img
+            src="images/projects/cabling/floor-plan.jpg"
+            alt="Small office structured cabling floor plan">
+
+    </div>
+
+
+    <!-- Project Overview -->
+
+    <div class="case-study-grid">
+
+        <div>
+
+            <h3>
+                Project Objective
+            </h3>
+
+            <p>
+                The objective was to design a structured cabling
+                system for a small accounting office that provides
+                organized, reliable, and scalable network connectivity
+                for users and shared network resources.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Tools & Technologies
+            </h3>
+
+            <div class="case-tags">
+
+                <span>Cat6 Cabling</span>
+                <span>Patch Panels</span>
+                <span>Network Rack</span>
+                <span>Cable Management</span>
+                <span>Draw.io</span>
+                <span>Ethernet</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Office Requirements -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Office Requirements
+        </h3>
+
+        <p>
+            The proposed network was designed for a 20-user
+            accounting office. Each workstation was provided with
+            a dedicated network outlet, with additional capacity
+            considered for shared resources and future expansion.
+        </p>
+
+        <ul class="case-list">
+
+            <li>
+                <i class="fas fa-check"></i>
+                20 user workstations
+            </li>
+
+            <li>
+                <i class="fas fa-check"></i>
+                Centralized network rack
+            </li>
+
+            <li>
+                <i class="fas fa-check"></i>
+                Cat6 horizontal cabling
+            </li>
+
+            <li>
+                <i class="fas fa-check"></i>
+                Patch panel termination
+            </li>
+
+            <li>
+                <i class="fas fa-check"></i>
+                Organized cable routing
+            </li>
+
+            <li>
+                <i class="fas fa-check"></i>
+                Provision for future expansion
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- Floor Plan -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Office Floor Plan
+        </h3>
+
+        <p>
+            A floor plan was developed to identify workstation
+            locations, network outlets, cable routes, and the
+            central network rack. Cable paths were planned to
+            provide organized routing while minimizing unnecessary
+            cable runs.
+        </p>
+
+
+        <div class="case-gallery">
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/projects/cabling/floor-plan.jpg"
+                    alt="Structured cabling floor plan">
+
+                <span>
+                    Office Floor Plan
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Cable Routing -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Cable Routing Design
+        </h3>
+
+        <p>
+            Cable routes were planned from the central network
+            rack to individual workstation outlets. Cable tray
+            routes and drops were represented on the design to
+            provide a clear physical installation path.
+        </p>
+
+
+        <div class="case-gallery">
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/projects/cabling/cable-routing.jpg"
+                    alt="Cable routing diagram">
+
+                <span>
+                    Cable Routing Diagram
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Rack Layout -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Network Rack Layout
+        </h3>
+
+        <p>
+            A rack layout was created to organize the network
+            equipment and support proper cable management.
+            Components were positioned logically to simplify
+            installation, maintenance, and troubleshooting.
+        </p>
+
+
+        <div class="case-gallery">
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/projects/cabling/rack-layout.jpg"
+                    alt="Network rack layout">
+
+                <span>
+                    Network Rack Layout
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Patch Panel -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Patch Panel Layout
+        </h3>
+
+        <p>
+            The patch panel was organized according to the
+            workstation cable labels. Each horizontal cable run
+            terminates at the patch panel, allowing the network
+            connections to be managed centrally.
+        </p>
+
+
+        <div class="case-gallery">
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/projects/cabling/patch-panel.jpg"
+                    alt="Patch panel layout">
+
+                <span>
+                    Patch Panel Layout
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Cable Labeling -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Cable Labeling Scheme
+        </h3>
+
+        <p>
+            A standardized cable labeling scheme was created to
+            make cable identification easier during installation,
+            troubleshooting, and future maintenance.
+        </p>
+
+
+        <div class="code-box">
+
+<pre>
+Example:
+
+PP01-01  →  Administration PC 01
+PP01-02  →  Administration PC 02
+PP01-03  →  Finance PC 01
+PP01-04  →  Finance PC 02
+</pre>
+
+        </div>
+
+        <p>
+            The labels were designed to provide a clear relationship
+            between the patch panel port and the corresponding
+            workstation outlet.
+        </p>
+
+    </div>
+
+
+    <!-- Bill of Materials -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Bill of Materials
+        </h3>
+
+        <p>
+            A Bill of Materials was prepared to identify the
+            materials required for the structured cabling
+            installation.
+        </p>
+
+
+        <div class="vlan-table">
+
+            <div class="vlan-row vlan-heading">
+
+                <span>Component</span>
+                <span>Purpose</span>
+                <span>Quantity</span>
+
+            </div>
+
+
+            <div class="vlan-row">
+
+                <span>Cat6 Cable</span>
+                <span>Horizontal Cabling</span>
+                <span>As Required</span>
+
+            </div>
+
+
+            <div class="vlan-row">
+
+                <span>Patch Panel</span>
+                <span>Cable Termination</span>
+                <span>1</span>
+
+            </div>
+
+
+            <div class="vlan-row">
+
+                <span>Network Rack</span>
+                <span>Equipment Mounting</span>
+                <span>1</span>
+
+            </div>
+
+
+            <div class="vlan-row">
+
+                <span>RJ45 Outlets</span>
+                <span>Workstation Connections</span>
+                <span>20+</span>
+
+            </div>
+
+
+            <div class="vlan-row">
+
+                <span>Patch Cords</span>
+                <span>Rack Connections</span>
+                <span>As Required</span>
+
+            </div>
+
+
+            <div class="vlan-row">
+
+                <span>Cable Management</span>
+                <span>Organization</span>
+                <span>As Required</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Documentation -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Documentation
+        </h3>
+
+        <p>
+            The project was documented using structured diagrams
+            and technical documentation. The final documentation
+            provides an installation reference and makes it easier
+            for technicians to understand the physical network
+            infrastructure.
+        </p>
+
+
+        <ul class="case-list">
+
+            <li>
+                <i class="fas fa-check"></i>
+                Floor plan
+            </li>
+
+            <li>
+                <i class="fas fa-check"></i>
+                Cable routing diagram
+            </li>
+
+            <li>
+                <i class="fas fa-check"></i>
+                Rack layout
+            </li>
+
+            <li>
+                <i class="fas fa-check"></i>
+                Patch panel layout
+            </li>
+
+            <li>
+                <i class="fas fa-check"></i>
+                Cable labeling schedule
+            </li>
+
+            <li>
+                <i class="fas fa-check"></i>
+                Bill of Materials
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- Skills Demonstrated -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Skills Demonstrated
+        </h3>
+
+        <div class="case-tags">
+
+            <span>Structured Cabling</span>
+            <span>Cat6 Installation Planning</span>
+            <span>Rack Design</span>
+            <span>Patch Panels</span>
+            <span>Cable Management</span>
+            <span>Cable Labeling</span>
+            <span>Network Documentation</span>
+            <span>Technical Drawing</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- Project Outcome -->
+
+    <div class="case-study-result">
+
+        <i class="fas fa-circle-check"></i>
+
+        <h3>
+            Project Outcome
+        </h3>
+
+        <p>
+            A complete structured cabling design was produced for
+            the office environment. The project demonstrates the
+            ability to plan physical network infrastructure,
+            organize network equipment, document cable routes,
+            and produce clear technical documentation for
+            installation and maintenance.
+        </p>
+
+    </div>
+
+</section>
+<!-- ================= AFYASMART PROJECT ================= -->
+
+<section class="project-case-study"
+         id="afya-smart">
+
+    <div class="case-study-header">
+
+        <span class="project-category">
+            Web Development
+        </span>
+
+        <h2>
+            AfyaSmart
+        </h2>
+
+        <p>
+            A web-based student healthcare management system
+            designed to help users organize personal health
+            information, wellness activities, medication reminders,
+            and emergency support tools.
+        </p>
+
+    </div>
+
+
+    <!-- Main Project Image -->
+
+    <div class="case-study-image">
+
+        <img
+            src="images/projects/afya-smart/dashboard.jpg"
+            alt="AfyaSmart healthcare management dashboard">
+
+    </div>
+
+
+    <!-- Overview -->
+
+    <div class="case-study-grid">
+
+        <div>
+
+            <h3>
+                Project Objective
+            </h3>
+
+            <p>
+                AfyaSmart was developed as a centralized web
+                application for managing different aspects of
+                personal health and wellness in one platform.
+                The system combines health records, wellness
+                tracking, reminders, and emergency support
+                functionality.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Technologies Used
+            </h3>
+
+            <div class="case-tags">
+
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>HTML</span>
+                <span>Bootstrap 5</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Chart.js</span>
+                <span>Leaflet</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Authentication -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Authentication & User Access
+        </h3>
+
+        <p>
+            The application includes user registration and
+            authentication functionality. Users register with
+            unique email addresses and access protected areas
+            through session-based authentication.
+        </p>
+
+        <ul class="case-list">
+
+            <li>
+                <i class="fas fa-check"></i>
+                User registration
+            </li>
+
+            <li>
+                <i class="fas fa-check"></i>
+                Secure password hashing
+            </li>
+
+            <li>
+                <i class="fas fa-check"></i>
+                Session-based authentication
+            </li>
+
+            <li>
+                <i class="fas fa-check"></i>
+                Authenticated dashboard
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- Dashboard -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Dashboard
+        </h3>
+
+        <p>
+            The authenticated dashboard provides an overview of
+            recent user activity. It displays information such as
+            medication counts, health records, upcoming reminders,
+            mood check-ins, and a daily health score.
+        </p>
+
+
+        <div class="case-gallery">
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/projects/afya-smart/dashboard.jpg"
+                    alt="AfyaSmart dashboard">
+
+                <span>
+                    AfyaSmart Dashboard
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Health Modules -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Health & Wellness Modules
+        </h3>
+
+        <p>
+            AfyaSmart combines several health and wellness
+            modules into one application.
+        </p>
+
+
+        <div class="case-tags">
+
+            <span>Medication Reminders</span>
+            <span>Mental Wellness</span>
+            <span>Symptoms Checker</span>
+            <span>Health Records</span>
+            <span>Health Timeline</span>
+            <span>Diet & Wellness</span>
+            <span>Daily Health Score</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- Medication -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Medication Management
+        </h3>
+
+        <p>
+            The medication module provides CRUD functionality for
+            managing medication information. Users can create,
+            view, update, and delete medication entries while the
+            system provides reminder notifications when medication
+            becomes due.
+        </p>
+
+
+        <div class="case-gallery">
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/projects/afya-smart/medication.jpg"
+                    alt="AfyaSmart medication management">
+
+                <span>
+                    Medication Management
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Mental Wellness -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Mental Wellness & Insights
+        </h3>
+
+        <p>
+            The mental wellness module allows users to record mood
+            check-ins and receive supportive responses. Mood data
+            is stored and presented through trend and mix charts
+            to help users understand their activity over time.
+        </p>
+
+
+        <div class="case-gallery">
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/projects/afya-smart/mental-health.jpg"
+                    alt="AfyaSmart mental wellness module">
+
+                <span>
+                    Mental Wellness & Insights
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Symptoms -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Symptoms Checker
+        </h3>
+
+        <p>
+            The symptoms module allows users to record selected
+            symptoms, severity levels, and temperature information.
+            The system provides general guidance and red-flag
+            warnings while storing the checks for use in the health
+            timeline and daily health score.
+        </p>
+
+    </div>
+
+<!-- Diet & Wellness -->
+
+<div class="case-study-section">
+
+    <h3>
+        Diet & Wellness Planner
+    </h3>
+
+    <p>
+        The Diet & Wellness module provides personalized
+        wellness guidance based on the user's selections.
+        It forms part of AfyaSmart's broader approach to
+        supporting healthy daily routines and wellness planning.
+    </p>
+
+
+    <div class="case-gallery">
+
+        <div class="gallery-item">
+
+            <img
+                src="images/projects/afya-smart/diet.jpg"
+                alt="AfyaSmart diet and wellness planner">
+
+            <span>
+                Diet & Wellness Planner
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+    <!-- Health Timeline -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Health Timeline
+        </h3>
+
+        <p>
+            A unified health timeline brings together information
+            from different modules, including health records,
+            medications, mood check-ins, and symptoms.
+        </p>
+
+
+        <div class="case-gallery">
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/projects/afya-smart/timeline.jpg"
+                    alt="AfyaSmart health timeline">
+
+                <span>
+                    Unified Health Timeline
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Charts -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Data Visualization
+        </h3>
+
+        <p>
+            Chart.js was used to present health insights visually,
+            including mood trends and the seven-day health score
+            trend.
+        </p>
+
+
+        <div class="case-tags">
+
+            <span>Chart.js</span>
+            <span>Mood Trends</span>
+            <span>Health Score</span>
+            <span>7-Day Trend</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- Emergency -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Emergency Support
+        </h3>
+
+        <p>
+            The emergency module provides an SOS action, browser
+            geolocation support, an embedded map, nearby healthcare
+            facility lookup, and external directions links.
+            Leaflet and OpenStreetMap are used for the map
+            functionality.
+        </p>
+
+
+        <div class="case-gallery">
+
+            <div class="gallery-item">
+
+                <img
+                    src="images/projects/afya-smart/emergency.jpg"
+                    alt="AfyaSmart emergency support map">
+
+                <span>
+                    Emergency Support & Map Integration
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- AI Assistant -->
+
+    <div class="case-study-section">
+
+        <h3>
+            AI Health Assistant
+        </h3>
+
+        <p>
+            AfyaSmart includes a guided AI health assistant that
+            provides general routines and suggested next steps.
+            The assistant includes safety messaging and is designed
+            as a non-diagnostic support feature.
+        </p>
+
+    </div>
+
+
+    <!-- Backend -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Backend & Database
+        </h3>
+
+        <p>
+            PHP was used for backend processing while MySQL or
+            MariaDB provides the application's database layer.
+            Backend handlers and database connectivity are
+            organized within the backend directory.
+        </p>
+
+
+        <div class="code-box">
+
+<pre>
+Frontend
+HTML + Bootstrap 5
+Custom CSS + JavaScript
+
+Backend
+PHP
+
+Database
+MySQL / MariaDB
+
+Additional Libraries
+Chart.js
+Leaflet + OpenStreetMap
+</pre>
+
+        </div>
+
+    </div>
+
+
+    <!-- Project Structure -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Project Structure
+        </h3>
+
+        <div class="code-box">
+
+<pre>
+dashboard.php
+login.html
+register.html
+medication.php
+mental-health.php
+diet.php
+health-records.php
+symptoms.php
+timeline.php
+assistant.php
+emergency.html
+
+backend/
+js/
+css/
+afya_smart.sql
+</pre>
+
+        </div>
+
+    </div>
+
+
+    <!-- Future Improvements -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Future Improvements
+        </h3>
+
+        <p>
+            Planned improvements include role-based access,
+            email and SMS reminder delivery, deeper analytics,
+            exportable reports, optional external AI integration
+            with safety controls, and API-based emergency service
+            integration.
+        </p>
+
+    </div>
+
+
+    <!-- Skills -->
+
+    <div class="case-study-section">
+
+        <h3>
+            Skills Demonstrated
+        </h3>
+
+        <div class="case-tags">
+
+            <span>PHP Development</span>
+            <span>MySQL</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Bootstrap</span>
+            <span>CRUD Development</span>
+            <span>Authentication</span>
+            <span>Database Integration</span>
+            <span>Chart.js</span>
+            <span>Map Integration</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- Outcome -->
+
+    <div class="case-study-result">
+
+        <i class="fas fa-circle-check"></i>
+
+        <h3>
+            Project Outcome
+        </h3>
+
+        <p>
+            AfyaSmart demonstrates practical full-stack web
+            development experience through the integration of a
+            PHP backend, relational database, responsive interface,
+            authentication, CRUD functionality, data visualization,
+            and location-based emergency support.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROJECT 4: 
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+========================================================= -->
+
+<section class="project-case-study" id="smartdesk">
+
+    <div class="case-study-header">
+
+        <span class="project-category">IT Support & Web Development</span>
+
+        <h2>SmartDesk — IT Support Ticketing System</h2>
+
+        <p>
+            SmartDesk is a web-based IT support ticketing system
+            designed to organize technical support requests, improve
+            issue tracking, and provide a structured workflow between
+            users, technicians, and administrators.
+        </p>
+
+    </div>
+
+    <!-- MAIN PROJECT SCREENSHOT -->
+
+    <div class="case-study-image">
+        <img
+            src="images/projects/smartdesk/dashboard.jpg"
+            alt="SmartDesk IT support dashboard"
+            loading="lazy">
+    </div>
+
+    <!-- PROJECT OVERVIEW -->
+
+    <div class="case-study-grid">
+
+        <div>
+            <h3>Project Objective</h3>
+
+            <p>
+                The goal was to develop a centralized platform where
+                users can submit IT problems and monitor their progress,
+                technicians can manage assigned tickets, and administrators
+                can oversee users and support activity.
+            </p>
+
+            <p>
+                The project demonstrates practical application
+                development, database integration, authentication,
+                role-based workflows, and IT support process management.
+            </p>
+        </div>
+
+        <div>
+            <h3>Tools & Technologies</h3>
+
+            <div class="case-tags">
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Apache</span>
+                <span>XAMPP</span>
+                <span>Git</span>
+                <span>GitHub</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- USER DASHBOARD -->
+
+    <div class="case-study-section">
+
+        <h3>1. Dashboard & Ticket Overview</h3>
+
+        <p>
+            The dashboard provides an entry point to the ticketing
+            workflow. It helps users navigate the application and access
+            their support activities without manually tracking requests.
+        </p>
+
+        <div class="case-gallery">
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/smartdesk/dashboard.jpg"
+                    alt="SmartDesk dashboard overview"
+                    loading="lazy">
+                <span>Dashboard Overview</span>
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/smartdesk/my-tickets.jpg"
+                    alt="SmartDesk list of user support tickets"
+                    loading="lazy">
+                <span>My Tickets</span>
+            </div>
+
+        </div>
+
+        <ul class="case-list">
+            <li><i class="fas fa-check"></i> Centralized access to support features</li>
+            <li><i class="fas fa-check"></i> Ticket listing and issue-title visibility</li>
+            <li><i class="fas fa-check"></i> Ticket reference numbers for identification</li>
+            <li><i class="fas fa-check"></i> Easier navigation of support requests</li>
+        </ul>
+
+    </div>
+
+    <!-- AUTHENTICATION -->
+
+    <div class="case-study-section">
+
+        <h3>2. User Registration & Authentication</h3>
+
+        <p>
+            SmartDesk includes user registration and login functionality.
+            Authentication provides a controlled entry point to the
+            system and supports separating user activities from
+            technician and administrator workflows.
+        </p>
+
+        <div class="case-gallery">
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/smartdesk/register.jpg"
+                    alt="SmartDesk user registration screen"
+                    loading="lazy">
+                <span>User Registration</span>
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/smartdesk/login.jpg"
+                    alt="SmartDesk login screen"
+                    loading="lazy">
+                <span>User Login</span>
+            </div>
+
+        </div>
+
+        <p>
+            The authentication workflow connects the web interface
+            to the PHP application and MySQL user records.
+        </p>
+
+    </div>
+
+    <!-- TICKET CREATION AND TRACKING -->
+
+    <div class="case-study-section">
+
+        <h3>3. Ticket Creation & Issue Tracking</h3>
+
+        <p>
+            Users can submit IT support requests through the ticketing
+            workflow and view their submitted tickets. This creates
+            a structured way to report technical problems instead of
+            relying entirely on informal messages or verbal requests.
+        </p>
+
+        <div class="case-gallery">
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/smartdesk/create-ticket.jpg"
+                    alt="SmartDesk ticket submission form"
+                    loading="lazy">
+                <span>Submit a Support Ticket</span>
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/smartdesk/ticket-details.jpg"
+                    alt="SmartDesk ticket details"
+                    loading="lazy">
+                <span>Ticket Details</span>
+            </div>
+
+        </div>
+
+        <ul class="case-list">
+            <li><i class="fas fa-check"></i> Structured reporting of IT issues</li>
+            <li><i class="fas fa-check"></i> Ticket numbers and issue titles</li>
+            <li><i class="fas fa-check"></i> Access to ticket details</li>
+            <li><i class="fas fa-check"></i> A central location for submitted requests</li>
+        </ul>
+
+    </div>
+
+    <!-- TECHNICIAN WORKFLOW -->
+
+    <div class="case-study-section">
+
+        <h3>4. Technician Dashboard & Assigned Tickets</h3>
+
+        <p>
+            The technician area supports the technical support workflow
+            by providing access to assigned tickets and their details.
+            This allows support staff to review reported problems and
+            manage their assigned work from a central interface.
+        </p>
+
+        <div class="case-gallery">
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/smartdesk/technician-dashboard.jpg"
+                    alt="SmartDesk technician dashboard"
+                    loading="lazy">
+                <span>Technician Dashboard</span>
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/smartdesk/assigned-tickets.jpg"
+                    alt="Tickets assigned to a SmartDesk technician"
+                    loading="lazy">
+                <span>Assigned Tickets</span>
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/smartdesk/technician-ticket-details.jpg"
+                    alt="Detailed view of an assigned support ticket"
+                    loading="lazy">
+                <span>Ticket Investigation View</span>
+            </div>
+
+        </div>
+
+        <p>
+            The technician workflow demonstrates how ticket assignment
+            and ticket details can be incorporated into a practical
+            service desk application.
+        </p>
+
+    </div>
+
+    <!-- ADMINISTRATION -->
+
+    <div class="case-study-section">
+
+        <h3>5. Administration & User Management</h3>
+
+        <p>
+            The administration area provides management functionality
+            for overseeing the application. It includes an administrator
+            dashboard, user management, and access to ticket reports.
+        </p>
+
+        <div class="case-gallery">
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/smartdesk/admin-dashboard.jpg"
+                    alt="SmartDesk administrator dashboard"
+                    loading="lazy">
+                <span>Admin Dashboard</span>
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/smartdesk/admin-users.jpg"
+                    alt="SmartDesk administrator user management"
+                    loading="lazy">
+                <span>User Management</span>
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/smartdesk/admin-reports.jpg"
+                    alt="SmartDesk support reports page"
+                    loading="lazy">
+                <span>Reports & Oversight</span>
+            </div>
+
+        </div>
+
+        <ul class="case-list">
+            <li><i class="fas fa-check"></i> Administrator dashboard</li>
+            <li><i class="fas fa-check"></i> User management interface</li>
+            <li><i class="fas fa-check"></i> Ticket reporting page</li>
+            <li><i class="fas fa-check"></i> Separate user, technician, and admin workflows</li>
+        </ul>
+
+    </div>
+
+    <!-- DATABASE AND IMPLEMENTATION -->
+
+    <div class="case-study-section">
+
+        <h3>6. Database Design & Application Structure</h3>
+
+        <p>
+            SmartDesk uses MySQL to persist application data and PHP
+            to process application requests. Its database includes
+            user and ticket records, together with ticket assignment
+            and ticket update records used by the support workflow.
+        </p>
+
+        <div class="case-tags">
+            <span>Users</span>
+            <span>Tickets</span>
+            <span>Ticket Assignments</span>
+            <span>Ticket Updates</span>
+            <span>PHP Backend</span>
+            <span>MySQL Database</span>
+        </div>
+
+        <p>
+            The application was developed and tested locally using
+            XAMPP, with Apache serving the PHP application and MySQL
+            handling the database.
+        </p>
+
+    </div>
+
+    <!-- TESTING AND TROUBLESHOOTING -->
+
+    <div class="case-study-section">
+
+        <h3>7. Testing & Troubleshooting</h3>
+
+        <p>
+            Development involved resolving issues across application
+            routing, database operations, ticket details, and
+            role-specific pages. This required checking both the
+            PHP logic and the connections between application pages.
+        </p>
+
+        <ul class="case-list">
+            <li><i class="fas fa-check"></i> Registration and login workflow checks</li>
+            <li><i class="fas fa-check"></i> Ticket creation and listing checks</li>
+            <li><i class="fas fa-check"></i> Technician assigned-ticket page troubleshooting</li>
+            <li><i class="fas fa-check"></i> Administrator dashboard and user-page fixes</li>
+            <li><i class="fas fa-check"></i> Reports page and database-related troubleshooting</li>
+        </ul>
+
+    </div>
+
+    <!-- SKILLS -->
+
+    <div class="case-study-section">
+
+        <h3>Skills Demonstrated</h3>
+
+        <div class="case-tags">
+            <span>IT Service Management</span>
+            <span>PHP Development</span>
+            <span>MySQL</span>
+            <span>Database Integration</span>
+            <span>Authentication</span>
+            <span>Role-Based Workflows</span>
+            <span>Application Debugging</span>
+            <span>Web Testing</span>
+            <span>Git & GitHub</span>
+        </div>
+
+    </div>
+
+    <!-- PROJECT RESULT -->
+
+    <div class="case-study-result">
+
+        <i class="fas fa-circle-check"></i>
+
+        <h3>Project Outcome</h3>
+
+        <p>
+            SmartDesk demonstrates the development of a multi-role
+            IT support ticketing application with user authentication,
+            ticket submission and tracking, technician assignment,
+            administrator functions, and reporting pages. It combines
+            practical IT support processes with PHP and MySQL web
+            application development.
+        </p>
+
+        <p>
+            The project is relevant to service desk operations,
+            technical support workflows, application troubleshooting,
+            and entry-level web development.
+        </p>
+
+        <a
+            href="https://github.com/weru198/SmartDesk"
+            class="project-link"
+            target="_blank"
+            rel="noopener noreferrer">
+            View SmartDesk on GitHub
+            <i class="fas fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROJECT 5: AUTOTECH IT SUPPORT AUTOMATION TOOLKIT
+========================================================= -->
+
+<section class="project-case-study" id="autotech">
+
+    <div class="case-study-header">
+
+        <span class="project-category">IT Support & Automation</span>
+
+        <h2>AutoTech — IT Support Automation Toolkit</h2>
+
+        <p>
+            AutoTech is a Python and Flask-based IT support toolkit
+            that brings together system information, network
+            diagnostics, disk storage monitoring, troubleshooting
+            report generation, and saved-report management through
+            a web dashboard.
+        </p>
+
+    </div>
+
+    <!-- MAIN PROJECT SCREENSHOT -->
+
+    <div class="case-study-image">
+        <img
+            src="images/projects/autotech/dashboard.jpg"
+            alt="AutoTech IT support dashboard"
+            loading="lazy">
+    </div>
+
+    <!-- PROJECT OVERVIEW -->
+
+    <div class="case-study-grid">
+
+        <div>
+            <h3>Project Objective</h3>
+
+            <p>
+                The objective was to build a centralized toolkit that
+                makes common IT support checks easier to access and
+                presents diagnostic information through a browser-based
+                interface.
+            </p>
+
+            <p>
+                The project connects Python-based system utilities
+                to a Flask web application, making it possible to run
+                selected diagnostics and view their results from a
+                dashboard.
+            </p>
+        </div>
+
+        <div>
+            <h3>Tools & Technologies</h3>
+
+            <div class="case-tags">
+                <span>Python</span>
+                <span>Flask</span>
+                <span>psutil</span>
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>Jinja Templates</span>
+                <span>Windows</span>
+                <span>Git</span>
+                <span>GitHub</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- DASHBOARD -->
+
+    <div class="case-study-section">
+
+        <h3>1. IT Support Dashboard</h3>
+
+        <p>
+            The dashboard acts as the central navigation point for
+            AutoTech. It provides access to the toolkit's diagnostic
+            modules and report-related pages, bringing common support
+            tasks together in one interface.
+        </p>
+
+        <div class="case-gallery">
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/autotech/dashboard.jpg"
+                    alt="AutoTech main dashboard"
+                    loading="lazy">
+                <span>Main Dashboard</span>
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/autotech/reports-dashboard.jpg"
+                    alt="AutoTech reports dashboard"
+                    loading="lazy">
+                <span>Reports Dashboard</span>
+            </div>
+
+        </div>
+
+        <ul class="case-list">
+            <li><i class="fas fa-check"></i> Centralized navigation for diagnostic modules</li>
+            <li><i class="fas fa-check"></i> Access to system and network checks</li>
+            <li><i class="fas fa-check"></i> Access to disk information</li>
+            <li><i class="fas fa-check"></i> Generated report listing and viewing</li>
+        </ul>
+
+    </div>
+
+    <!-- SYSTEM INFORMATION -->
+
+    <div class="case-study-section">
+
+        <h3>2. System Information</h3>
+
+        <p>
+            The System Information module collects useful details
+            about the computer and displays them through the
+            application. This helps an IT support technician review
+            the machine's basic configuration during initial diagnosis.
+        </p>
+
+        <div class="case-gallery">
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/autotech/system-information.jpg"
+                    alt="AutoTech system information results"
+                    loading="lazy">
+                <span>System Information</span>
+            </div>
+
+        </div>
+
+        <p>The module includes information such as:</p>
+
+        <ul class="case-list">
+            <li><i class="fas fa-check"></i> Hostname and operating system</li>
+            <li><i class="fas fa-check"></i> Processor information when available</li>
+            <li><i class="fas fa-check"></i> Python runtime information</li>
+            <li><i class="fas fa-check"></i> Memory capacity and usage information</li>
+            <li><i class="fas fa-check"></i> Storage capacity and available space</li>
+        </ul>
+
+    </div>
+
+    <!-- NETWORK DIAGNOSTICS -->
+
+    <div class="case-study-section">
+
+        <h3>3. Network Diagnostics</h3>
+
+        <p>
+            The Network Diagnostics module supports basic network
+            troubleshooting by running diagnostic checks and
+            displaying the resulting information through the Flask
+            application.
+        </p>
+
+        <div class="case-gallery">
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/autotech/network-diagnostics.jpg"
+                    alt="AutoTech network diagnostics interface"
+                    loading="lazy">
+                <span>Network Diagnostics Interface</span>
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/autotech/network-results.jpg"
+                    alt="AutoTech network diagnostic results"
+                    loading="lazy">
+                <span>Diagnostic Results</span>
+            </div>
+
+        </div>
+
+        <ul class="case-list">
+            <li><i class="fas fa-check"></i> Network diagnostic action through the dashboard</li>
+            <li><i class="fas fa-check"></i> Results returned to the application interface</li>
+            <li><i class="fas fa-check"></i> Support for investigating basic connectivity issues</li>
+            <li><i class="fas fa-check"></i> A central place to review diagnostic output</li>
+        </ul>
+
+        <p>
+            These tools support initial troubleshooting; they do not
+            automatically identify or resolve every possible network
+            fault.
+        </p>
+
+    </div>
+
+    <!-- DISK HEALTH AND STORAGE -->
+
+    <div class="case-study-section">
+
+        <h3>4. Disk Health & Storage Monitoring</h3>
+
+        <p>
+            The Disk Health & Storage module displays storage
+            information such as disk capacity, used space, available
+            space, and usage percentage. Capacity warnings can help
+            identify drives that may require attention.
+        </p>
+
+        <div class="case-gallery">
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/autotech/disk-health.jpg"
+                    alt="AutoTech disk health and storage page"
+                    loading="lazy">
+                <span>Disk Health & Storage</span>
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/autotech/disk-usage.jpg"
+                    alt="AutoTech storage usage and available capacity"
+                    loading="lazy">
+                <span>Storage Usage Details</span>
+            </div>
+
+        </div>
+
+        <ul class="case-list">
+            <li><i class="fas fa-check"></i> Disk capacity information</li>
+            <li><i class="fas fa-check"></i> Used and available storage space</li>
+            <li><i class="fas fa-check"></i> Storage usage percentage</li>
+            <li><i class="fas fa-check"></i> Capacity warnings for drives requiring attention</li>
+        </ul>
+
+        <p>
+            The current module focuses on storage usage and capacity
+            monitoring. These indicators should not be interpreted as
+            a complete physical disk health or failure prediction test.
+        </p>
+
+    </div>
+
+    <!-- TROUBLESHOOTING REPORTS -->
+
+    <div class="case-study-section">
+
+        <h3>5. Troubleshooting Report Generation</h3>
+
+        <p>
+            AutoTech includes a troubleshooting report feature that
+            generates a text report and stores it in the application's
+            reports directory. This provides a persistent record of
+            diagnostic information that can be reviewed later.
+        </p>
+
+        <div class="case-gallery">
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/autotech/generate-report.jpg"
+                    alt="AutoTech troubleshooting report generation"
+                    loading="lazy">
+                <span>Generate Troubleshooting Report</span>
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/autotech/report-output.jpg"
+                    alt="Generated AutoTech troubleshooting report"
+                    loading="lazy">
+                <span>Report Output</span>
+            </div>
+
+        </div>
+
+        <ul class="case-list">
+            <li><i class="fas fa-check"></i> Report generation from the application</li>
+            <li><i class="fas fa-check"></i> Timestamp-based report filenames</li>
+            <li><i class="fas fa-check"></i> Text report files saved in the reports directory</li>
+            <li><i class="fas fa-check"></i> Easier retention of troubleshooting information</li>
+        </ul>
+
+        <div class="code-box">
+<pre>
+reports/
+    report_YYYYMMDD_HHMMSS.txt
+</pre>
+        </div>
+
+        <p>
+            The timestamp-based naming approach helps distinguish
+            individual report files and reduces the likelihood of
+            accidentally reusing the same filename.
+        </p>
+
+    </div>
+
+    <!-- REPORTS DASHBOARD -->
+
+    <div class="case-study-section">
+
+        <h3>6. Reports Dashboard & Saved Reports</h3>
+
+        <p>
+            The Reports Dashboard lists reports generated by the
+            application and provides access to previously saved
+            report contents. This creates a simple workflow for
+            revisiting diagnostic information without having to
+            generate the same report again.
+        </p>
+
+        <div class="case-gallery">
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/autotech/reports-dashboard.jpg"
+                    alt="AutoTech list of saved troubleshooting reports"
+                    loading="lazy">
+                <span>Saved Reports</span>
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="images/projects/autotech/view-report.jpg"
+                    alt="AutoTech saved report viewing page"
+                    loading="lazy">
+                <span>View Saved Report</span>
+            </div>
+
+        </div>
+
+        <ul class="case-list">
+            <li><i class="fas fa-check"></i> Listing of previously generated reports</li>
+            <li><i class="fas fa-check"></i> Timestamp-based report identification</li>
+            <li><i class="fas fa-check"></i> Opening saved report contents</li>
+            <li><i class="fas fa-check"></i> Persistent report files stored locally</li>
+        </ul>
+
+    </div>
+
+    <!-- APPLICATION ARCHITECTURE -->
+
+    <div class="case-study-section">
+
+        <h3>7. Application Structure & Integration</h3>
+
+        <p>
+            AutoTech uses Flask to connect browser requests to
+            Python-based diagnostic functions. HTML templates
+            display the information returned by the backend,
+            while CSS provides the dashboard's presentation.
+        </p>
+
+        <div class="code-box">
+<pre>
+AutoTech/
+├── app.py
+├── reports/
+├── templates/
+│   ├── dashboard.html
+│   └── ...
+└── static/
+    └── css/
+        └── style.css
+</pre>
+        </div>
+
+        <p>
+            This simplified structure highlights the Flask entry
+            point, template layer, stylesheet, and report storage
+            directory. Add any other folders shown in your actual
+            project when documenting the final repository structure.
+        </p>
+
+        <div class="case-tags">
+            <span>Flask Routes</span>
+            <span>Python Modules</span>
+            <span>HTML Templates</span>
+            <span>CSS Styling</span>
+            <span>System Utilities</span>
+            <span>Report Files</span>
+        </div>
+
+    </div>
+
+    <!-- TESTING -->
+
+    <div class="case-study-section">
+
+        <h3>8. Testing & Troubleshooting</h3>
+
+        <p>
+            Development involved testing the individual diagnostic
+            pages and correcting issues in Flask routes, function
+            calls, template rendering, and report handling.
+        </p>
+
+        <ul class="case-list">
+            <li><i class="fas fa-check"></i> System information page loading and output checks</li>
+            <li><i class="fas fa-check"></i> Network diagnostics route testing</li>
+            <li><i class="fas fa-check"></i> Disk usage display and capacity warning checks</li>
+            <li><i class="fas fa-check"></i> Troubleshooting report generation</li>
+            <li><i class="fas fa-check"></i> Reports dashboard listing and opening saved reports</li>
+        </ul>
+
+        <p>
+            Debugging included resolving route and indentation issues,
+            checking variable scope, and ensuring that the correct
+            template was available for each page.
+        </p>
+
+    </div>
+
+    <!-- SKILLS -->
+
+    <div class="case-study-section">
+
+        <h3>Skills Demonstrated</h3>
+
+        <div class="case-tags">
+            <span>Python Programming</span>
+            <span>Flask Development</span>
+            <span>System Information</span>
+            <span>Network Troubleshooting</span>
+            <span>Storage Monitoring</span>
+            <span>Report Generation</span>
+            <span>HTML & CSS</span>
+            <span>Debugging</span>
+            <span>Application Testing</span>
+            <span>Technical Documentation</span>
+        </div>
+
+    </div>
+
+    <!-- PROJECT RESULT -->
+
+    <div class="case-study-result">
+
+        <i class="fas fa-circle-check"></i>
+
+        <h3>Project Outcome</h3>
+
+        <p>
+            AutoTech brings several practical IT support functions
+            into one Flask-based dashboard. The working modules
+            demonstrate system information collection, network
+            diagnostics, storage usage monitoring, troubleshooting
+            report generation, and access to previously saved reports.
+        </p>
+
+        <p>
+            The project demonstrates the use of Python to support
+            everyday IT operations and the integration of backend
+            utilities with a browser-based interface.
+        </p>
+
+        <a
+            href="https://github.com/weru198/AutoTech"
+            class="project-link"
+            target="_blank"
+            rel="noopener noreferrer">
+            View AutoTech on GitHub
+            <i class="fas fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+
+<footer><strong>AW / Alex Waweru</strong><p>Selected work in networking, infrastructure and software development.</p><a class="back-top" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top ↑</a></footer>
+<script>
+const menuToggle=document.getElementById("menuToggle");
+const navLinks=document.getElementById("navLinks");
+if(menuToggle&&navLinks){menuToggle.addEventListener("click",()=>navLinks.classList.toggle("open"));navLinks.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>navLinks.classList.remove("open")));}
+</script>
+</body>
+</html>
